@@ -75,6 +75,8 @@ Checkcle can be configured via environment variables or a `config.yaml` file.
 
 > **Personal note:** I run this locally with `CHECKCLE_LOG_LEVEL=debug` and `CHECKCLE_CHECK_INTERVAL=30` for faster feedback during development.
 
+> **Tip:** If you're running this behind a reverse proxy (e.g. Caddy or nginx), make sure to set `CHECKCLE_HOST=127.0.0.1` so the app only listens locally and your proxy handles TLS termination.
+
 ## Contributing
 
 Contributions are welcome! Please read our [contributing guidelines](CONTRIBUTING.md) and check the [open issues](https://github.com/checkcle/checkcle/issues).
@@ -91,4 +93,4 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 
 ## Acknowledgements
 
-This project is a fork of [operacle/checkcle](https://github.com/operacle/checkcle). Thanks to all original contributors.
+This project is a fork of [operacle/checkcle](https://github.com/operacle/checkcle). Thank
