@@ -82,4 +82,4 @@ Checkcle can be configured via environment variables or a `config.yaml` file.
 
 > **Personal note:** I also set `CHECKCLE_DATA_DIR=/var/lib/checkcle` when running on my home server so the data directory survives container rebuilds without relying on a relative path.
 
-> **Personal note:** I keep a `.env` file alongside my `docker-compose.yml` with `CHECKCLE_SECRET` set, and reference it with `env_file: .env` in the compose config — avoids accidentally committing the secret into version control.
+> **Personal note:** I use `CHECKCLE_PORT=9090` on my home server since port 8090 is already taken by another service (Portainer). Easy change, just remember to update your reverse proxy config to match.
