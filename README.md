@@ -80,16 +80,10 @@ Checkcle can be configured via environment variables or a `config.yaml` file.
 
 > **Tip:** Set `CHECKCLE_REQUEST_TIMEOUT` to a lower value (e.g. `5`) if you want checks to fail faster for unresponsive endpoints rather than waiting the full default.
 
+> **Personal note:** I also set `CHECKCLE_DATA_DIR=/var/lib/checkcle` when running on my home server so the data directory survives container rebuilds without relying on a relative path.
+
 ## Contributing
 
 Contributions are welcome! Please read our [contributing guidelines](CONTRIBUTING.md) and check the [open issues](https://github.com/checkcle/checkcle/issues).
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feat/my-feature`)
-3. Commit your changes (`git commit -m 'feat: add my feature'`)
-4. Push to the branch (`git push origin feat/my-feature`)
-5. Open a Pull Request
-
-## License
-
-This proje
+1. Fork the rep
