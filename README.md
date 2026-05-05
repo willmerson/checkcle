@@ -82,4 +82,4 @@ Checkcle can be configured via environment variables or a `config.yaml` file.
 
 > **Personal note:** I also set `CHECKCLE_DATA_DIR=/var/lib/checkcle` when running on my home server so the data directory survives container rebuilds without relying on a relative path.
 
-> **Personal note:** I keep a `.env` file next to my `docker-compose.yml` with all the secrets and use `env_file: .env` in the compose config — makes it easy to rotate `CHECKCLE_SECRET` without editing the compose file directly.
+> **Personal note:** I keep a `.env` file alongside my `docker-compose.yml` with `CHECKCLE_SECRET` set, and reference it with `env_file: .env` in the compose config — avoids accidentally committing the secret into version control.
