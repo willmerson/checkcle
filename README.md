@@ -71,6 +71,9 @@ Checkcle can be configured via environment variables or a `config.yaml` file.
 | `CHECKCLE_SECRET` | *(required)* | JWT secret key |
 | `CHECKCLE_DATA_DIR` | `./data` | Data directory path |
 | `CHECKCLE_LOG_LEVEL` | `info` | Log level (debug/info/warn/error) |
+| `CHECKCLE_CHECK_INTERVAL` | `60` | Default check interval in seconds |
+
+> **Personal note:** I run this locally with `CHECKCLE_LOG_LEVEL=debug` and `CHECKCLE_CHECK_INTERVAL=30` for faster feedback during development.
 
 ## Contributing
 
