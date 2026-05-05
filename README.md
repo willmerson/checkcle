@@ -82,6 +82,4 @@ Checkcle can be configured via environment variables or a `config.yaml` file.
 
 > **Personal note:** I also set `CHECKCLE_DATA_DIR=/var/lib/checkcle` when running on my home server so the data directory survives container rebuilds without relying on a relative path.
 
-> **Personal note:** I noticed the default `CHECKCLE_CHECK_INTERVAL` of `60` seconds can feel slow when first adding a new monitor — you don't get feedback for a full minute. I set mine to `30` globally and just bump it back up for low-priority services individually. Worth considering if you're impatient like me.
-
-## Co
+> **Personal note:** I keep a `.env` file next to my `docker-compose.yml` with all the secrets and use `env_file: .env` in the compose config — makes it easy to rotate `CHECKCLE_SECRET` without editing the compose file directly.
