@@ -82,4 +82,4 @@ Checkcle can be configured via environment variables or a `config.yaml` file.
 
 > **Personal note:** I also set `CHECKCLE_DATA_DIR=/var/lib/checkcle` when running on my home server so the data directory survives container rebuilds without relying on a relative path.
 
-> **Personal note:** If you use Caddy as your reverse proxy, the following two-liner in your Caddyfile works well — `reverse_proxy 127.0.0.1:8090` under your domain block is all you need; Caddy handles HTTPS automatically via Let's Encrypt.
+> **Personal note:** I keep a `.env` file in the repo root (git-ignored) with all my local values so I don't have to remember them between sessions. Just run `export $(cat .env | xargs)` before starting the app.
