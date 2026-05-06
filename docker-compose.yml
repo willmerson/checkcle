@@ -23,7 +23,7 @@ services:
       interval: 30s
       timeout: 10s
       retries: 3
-      start_period: 20s
+      start_period: 40s  # increased from 20s - app takes longer to start on my machine
 
   # Optional: Nginx reverse proxy
   nginx:
