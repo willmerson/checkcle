@@ -64,6 +64,8 @@ services:
       timeout: 5s
       retries: 5
       start_period: 30s  # bumped from 20s, postgres was occasionally failing first health check
+    ports:
+      - "5432:5432"  # expose postgres port locally so I can connect with pgAdmin/DBeaver for debugging
 
 volumes:
   checkcle_data:
