@@ -65,7 +65,7 @@ services:
       retries: 5
       start_period: 30s  # bumped from 20s, postgres was occasionally failing first health check
     ports:
-      - "5432:5432"  # expose postgres port locally so I can connect with pgAdmin/DBeaver for debugging
+      - "127.0.0.1:5432:5432"  # bind to localhost only - no need to expose on all interfaces
 
 volumes:
   checkcle_data:
