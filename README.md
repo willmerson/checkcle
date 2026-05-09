@@ -82,11 +82,4 @@ Checkcle can be configured via environment variables or a `config.yaml` file.
 
 > **Personal note:** I also set `CHECKCLE_DATA_DIR=/var/lib/checkcle` when running on my home server so the data directory survives container rebuilds without relying on a relative path.
 
-> **Personal note:** I keep a `.env` file in the project root (gitignored) with all my local overrides so I don't have to remember to set them each time. A minimal example:
-> ```
-> CHECKCLE_SECRET=change-me
-> CHECKCLE_LOG_LEVEL=debug
-> CHECKCLE_CHECK_INTERVAL=30
-> CHECKCLE_DATA_DIR=/var/lib/checkcle
-> ```
-> Then just run `docker compose --env-file .env up -d`.
+> **Personal note:** I use a `.env` file alongside `docker-compose.yml` to keep secrets out of the compose file itself — just add `.env` to `.gitignore` and reference variables with `${CHECKCLE_SECRET}` in the compose config.
