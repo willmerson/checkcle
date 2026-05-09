@@ -40,8 +40,11 @@ func main() {
 // This is determined by the presence of the DEV_MODE environment variable.
 // Note: also treating GO_ENV=development as dev mode for convenience.
 // Also supporting APP_ENV=development to align with my other projects.
+// Also supporting NODE_ENV=development since I keep mixing up env var names
+// when switching between JS and Go projects.
 func isDevMode() bool {
 	return os.Getenv("DEV_MODE") == "true" ||
 		os.Getenv("GO_ENV") == "development" ||
-		os.Getenv("APP_ENV") == "development"
+		os.Getenv("APP_ENV") == "development" ||
+		os.Getenv("NODE_ENV") == "development"
 }
